@@ -1,0 +1,106 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Formulario de Evaluación Solar</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background: #eef6f9;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 40px;
+    }
+    form {
+      background: #ffffff;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      max-width: 500px;
+      width: 100%;
+      border-left: 5px solid #1DA1F2;
+    }
+    label {
+      font-weight: bold;
+      display: block;
+      margin-top: 15px;
+      color: #0e314c;
+    }
+    input[type="text"],
+    input[type="tel"],
+    input[type="email"] {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+    }
+    .radio-group {
+      margin-top: 5px;
+      margin-bottom: 10px;
+    }
+    .radio-group label {
+      font-weight: normal;
+      margin-right: 15px;
+      color: #333;
+    }
+    button {
+      margin-top: 20px;
+      padding: 12px;
+      background-color: #1DA1F2;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      width: 100%;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #177ac9;
+    }
+  </style>
+</head>
+<body>
+
+  <form action="https://formspree.io/f/mgvzjdyk" method="POST">
+    <h2 style="color:#1DA1F2; text-align:center;">Formulario de Evaluación Solar</h2>
+
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" name="nombre" required>
+
+    <label for="telefono">Teléfono:</label>
+    <input type="tel" id="telefono" name="telefono" required>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label>Puntuación de crédito aproximada:</label>
+    <div class="radio-group">
+      <input type="radio" id="credito1" name="credito" value="680" required>
+      <label for="credito1">680</label>
+
+      <input type="radio" id="credito2" name="credito" value="680 o más">
+      <label for="credito2">680 o más</label>
+    </div>
+
+    <label>¿Casa propia?</label>
+    <div class="radio-group">
+      <input type="radio" id="casaSi" name="casa" value="Sí" required>
+      <label for="casaSi">Sí</label>
+
+      <input type="radio" id="casaNo" name="casa" value="No">
+      <label for="casaNo">No</label>
+    </div>
+
+    <label for="factura">¿De cuánto fue su última factura de Luma?</label>
+    <input type="text" id="factura" name="factura" required>
+
+    <button type="submit">Enviar</button>
+  </form>
+
+</body>
+</html>
